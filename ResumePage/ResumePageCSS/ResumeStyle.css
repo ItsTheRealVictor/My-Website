@@ -12,8 +12,19 @@ body {
 
 h1 {
     color: var(--color-four-dark);
+    text-align: center;
+}
+
+p {
+    color:var(--color-four-dark);
 }
 
 .navbar {
     background-color: var(--color-two-dark);
+}
+
+button {
+    background-color:var(--color-three-dark) !important;
+    border-color: var(--color-three-dark) !important;
+    
 }
