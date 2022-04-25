@@ -20,7 +20,12 @@ h1 {
 
 #about-text {
     color: yellow;
-    padding-right: 20% ;
+    text-align: center;
+}
+
+#skills-text {
+    color: yellow;
+    text-align: center;
 }
 
 .navbar {
