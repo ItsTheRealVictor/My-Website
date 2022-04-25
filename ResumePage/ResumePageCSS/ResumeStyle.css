@@ -1,11 +1,19 @@
+:root {
+    --main-color-dark:#283149; 
+    --color-two-dark: #404B69;
+    --color-three-dark: #00818A;
+    --color-four-dark: #DBEDF3;
+}
+
+
 body {
-    background-color: #33313B;
+    background-color: var(--main-color-dark);
 }
 
 h1 {
-    color: #E6F5FF;
+    color: var(--color-four-dark);
 }
 
 .navbar {
-    background-color: #3C4F65;
+    background-color: var(--color-two-dark);
 }
