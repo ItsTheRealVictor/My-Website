@@ -3,6 +3,7 @@
     --color-two-dark: #404B69;
     --color-three-dark: #00818A;
     --text-color-dark: #DBEDF3;
+    --secondary-text-color-dark: rgb(232, 232, 144);
 }
 
 
@@ -19,12 +20,12 @@ h1 {
 }
 
 #about-text {
-    color: yellow;
+    color: rgb(232, 232, 144);
     text-align: center;
 }
 
 #skills-text {
-    color: yellow;
+    color: rgb(232, 232, 144);
     text-align: center;
 }
 
@@ -32,3 +33,6 @@ h1 {
     background-color: var(--color-two-dark);
 }
 
+button {
+    text-align:center;
+}
