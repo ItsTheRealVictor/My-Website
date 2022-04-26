@@ -1,0 +1,59 @@
+:root {
+    --main-color-dark:#222831; 
+    --color-two-dark: #30475E;
+    --color-three-dark: #F05454;
+    --text-color-dark: #DDDDDD;
+    --secondary-text-color-dark: rgb(236, 154, 86);
+}
+
+
+body {
+    background-color: var(--main-color-dark);
+    font-family: "Montserrat";
+    color: var(--text-color-dark);
+    text-align: center;
+}
+
+h1 {
+    color: var(--text-color-dark);
+    display:block;
+    text-align:center;
+    padding: 5%;
+    font-family: "Amatic SC";
+
+}
+
+#about {
+    background-color:var(--color-two-dark);
+}
+
+#skills {
+    background-color:#3e5d7b;
+}
+
+#links {
+    background-color:var(--color-two-dark);
+}
+
+
+.navbar {
+    background-color: var(--color-three-dark);
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1rem;
+}
+
+.navbar-brand {
+    padding-left:1rem;
+}
+
+button {
+    text-align:center;
+}
