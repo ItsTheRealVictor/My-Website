@@ -1,6 +1,6 @@
 :root {
-    --main-color-dark:#222831; 
-    --color-two-dark: #30475E;
+    --main-color:#222831; 
+    --color-two: #30475E;
     --color-three-dark: #F05454;
     --text-color-dark: #DDDDDD;
     --secondary-text-color-dark: rgb(236, 154, 86);
@@ -8,10 +8,19 @@
 
 
 body {
-    background-color: var(--main-color-dark);
+    background-color: var(--main-color);
     font-family: "Montserrat";
     color: var(--text-color-dark);
     text-align: center;
+}
+
+#main-header {
+    color: var(--text-color-dark);
+    display:block;
+    text-align:center;
+    padding: 5%;
+    font-family: "Amatic SC";
+
 }
 
 h1 {
@@ -22,9 +31,17 @@ h1 {
     font-family: "Amatic SC";
 
 }
+h2 {
+    color: var(--text-color-dark);
+    display:block;
+    text-align:center;
+    padding: 5%;
+    font-family: "Montserrat";
+
+}
 
 #about {
-    background-color:var(--color-two-dark);
+    background-color:var(--color-two);
 }
 
 #skills {
@@ -32,7 +49,7 @@ h1 {
 }
 
 #links {
-    background-color:var(--color-two-dark);
+    background-color:var(--color-two);
 }
 
 
@@ -56,4 +73,23 @@ h1 {
 
 button {
     text-align:center;
+}
+
+
+li {
+    padding-left:1em;
+    left: -10px;
+}
+
+li span {
+    display: block;
+}
+
+.form-label {
+    padding-left: -5rem;
+}
+
+.skill-box h2 {
+    font-family: "Amatic SC";
+    font-weight:bolder;
 }
