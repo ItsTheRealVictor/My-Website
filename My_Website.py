@@ -12,6 +12,5 @@ def resume():
     return render_template('ResumeIndex.html')
 
 
-
 if __name__ == "__main__":
     app.run(debug=True)
