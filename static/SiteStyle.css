@@ -93,3 +93,11 @@ li span {
     font-family: "Amatic SC";
     font-weight:bolder;
 }
+
+.form-label{
+    color:yellow;
+}
+
+.form-check-label {
+    color:yellow;
+}
