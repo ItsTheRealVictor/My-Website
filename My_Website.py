@@ -11,6 +11,9 @@ def homepage():
 def resume():
     return render_template('ResumeIndex.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('ContactIndex.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
