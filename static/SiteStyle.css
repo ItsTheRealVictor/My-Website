@@ -94,10 +94,10 @@ li span {
     font-weight:bolder;
 }
 
-.form-label{
-    color:yellow;
+.checkybox{
+    color: var(--text-color-dark);
 }
 
-.form-check-label {
-    color:yellow;
+#floatingTextarea {
+    height:250px;
 }
