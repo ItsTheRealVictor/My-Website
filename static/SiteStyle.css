@@ -1,21 +1,44 @@
 :root {
-    --main-color:#222831; 
-    --color-two: #30475E;
+    --main-color-dark:#222831; 
+    --color-two-dark: #30475E;
     --color-three-dark: #F05454;
     --text-color-dark: #DDDDDD;
     --secondary-text-color-dark: rgb(236, 154, 86);
+    --main-color-light: #F6F6F6;
+    --color-two-light: #C7FFD8;
+    --color-three-light: #98DED9;
+    --text-color-light: #161D6F;
 }
 
 
-body {
+
+
+
+.lightbody {
+    background-color: var(--color-two-light);
+    font-family: "Montserrat";
+    color: var(--text-color-light);
+    text-align: center;
+}
+
+.darkbody {
     background-color: var(--main-color);
     font-family: "Montserrat";
     color: var(--text-color-dark);
     text-align: center;
 }
 
-#main-header {
+#main-header-dark {
     color: var(--text-color-dark);
+    display:block;
+    text-align:center;
+    padding: 5%;
+    font-family: "Amatic SC";
+
+}
+
+#main-header-light {
+    color: var(--color-four-light);
     display:block;
     text-align:center;
     padding: 5%;
@@ -31,6 +54,25 @@ h1 {
     font-family: "Amatic SC";
 
 }
+
+.dark-header1 {
+    color: var(--text-color-dark);
+    display:block;
+    text-align:center;
+    padding: 5%;
+    font-family: "Amatic SC";
+
+}
+
+.light-header1{
+    color: var(--text-color-light);
+    display:block;
+    text-align:center;
+    padding: 5%;
+    font-family: "Amatic SC";
+
+}
+
 h2 {
     color: var(--text-color-dark);
     display:block;
@@ -40,21 +82,41 @@ h2 {
 
 }
 
-#about {
+#about-dark {
     background-color:var(--color-two);
 }
 
-#skills {
+#about-light {
+    background-color:var(--color-two-light);
+
+}
+
+#skills-dark {
     background-color:#3e5d7b;
 }
 
-#links {
-    background-color:var(--color-two);
+#skills-light {
+    background-color: var(--main-color-light);
+}
+
+#links-dark {
+    background-color:var(--color-two-dark);
+}
+#links-light {
+    background-color:var(--color-two-light);
 }
 
 
-.navbar {
+
+
+
+.navbar-dark {
     background-color: var(--color-three-dark);
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+}
+.navbar-light {
+    background-color: var(--color-three-light);
     padding-top:1.5rem;
     padding-bottom:1.5rem;
 }
