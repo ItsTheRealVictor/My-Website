@@ -48,7 +48,7 @@ h2 {
     color: var(--text-color-dark);
     display:block;
     text-align:center;
-    padding: 5%;
+    padding: 4%;
     font-family: "Montserrat";
 
 }
@@ -77,6 +77,11 @@ h2 {
     padding:2rem;
 }
 
+.resume_button{
+    display:block;
+    background-color:red;
+}
+
 .contact {
     background-color: var(--main-color-dark);
 }
@@ -98,10 +103,6 @@ h2 {
 
 .navbar-brand {
     padding-left:1rem;
-}
-
-button {
-    text-align:center;
 }
 
 
