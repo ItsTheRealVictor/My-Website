@@ -11,23 +11,6 @@
 }
 
 
-
-
-
-.lightbody {
-    background-color: var(--color-two-light);
-    font-family: "Montserrat";
-    color: var(--text-color-light);
-    text-align: center;
-}
-
-.darkbody {
-    background-color: var(--main-color);
-    font-family: "Montserrat";
-    color: var(--text-color-dark);
-    text-align: center;
-}
-
 #main-header-dark {
     color: var(--text-color-dark);
     display:block;
@@ -37,13 +20,8 @@
 
 }
 
-#main-header-light {
-    color: var(--color-four-light);
-    display:block;
-    text-align:center;
-    padding: 5%;
-    font-family: "Amatic SC";
-
+body {
+    background-color:#222831;
 }
 
 h1 {
@@ -55,7 +33,7 @@ h1 {
 
 }
 
-.dark-header1 {
+.h1 {
     color: var(--text-color-dark);
     display:block;
     text-align:center;
@@ -64,14 +42,7 @@ h1 {
 
 }
 
-.light-header1{
-    color: var(--text-color-light);
-    display:block;
-    text-align:center;
-    padding: 5%;
-    font-family: "Amatic SC";
 
-}
 
 h2 {
     color: var(--text-color-dark);
@@ -82,41 +53,37 @@ h2 {
 
 }
 
-#about-dark {
-    background-color:var(--color-two);
+
+
+#about {
+    background-color:var(--main-color-dark);
+    color:#98DED9;
+
 }
 
-#about-light {
-    background-color:var(--color-two-light);
-
-}
-
-#skills-dark {
-    background-color:#3e5d7b;
-}
-
-#skills-light {
-    background-color: var(--main-color-light);
-}
-
-#links-dark {
-    background-color:var(--color-two-dark);
-}
-#links-light {
-    background-color:var(--color-two-light);
+#about-text {
+    text-align:center;
 }
 
 
+#skills{
+    background-color: var(--color-two-dark);
+    color:#98DED9;
+
+}
+
+#links{
+    background-color:var(--main-color-dark);
+    padding:2rem;
+}
+
+.contact {
+    background-color: var(--main-color-dark);
+}
 
 
-
-.navbar-dark {
+.navbar {
     background-color: var(--color-three-dark);
-    padding-top:1.5rem;
-    padding-bottom:1.5rem;
-}
-.navbar-light {
-    background-color: var(--color-three-light);
     padding-top:1.5rem;
     padding-bottom:1.5rem;
 }
