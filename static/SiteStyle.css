@@ -43,7 +43,7 @@ h1 {
 }
 
 
-
+/* 
 h2 {
     color: var(--text-color-dark);
     display:block;
@@ -51,7 +51,7 @@ h2 {
     padding: 4%;
     font-family: "Montserrat";
 
-}
+} */
 
 
 
@@ -123,6 +123,58 @@ li span {
     font-family: "Amatic SC";
     font-weight:bolder;
 }
+
+.skills-container {
+    background-color:var(--color-two-dark);
+}
+
+.skills-container h1 {
+    color: var(--text-color-dark);
+}
+
+.skills-content-container{
+    
+    /* max-width: 960px; */
+    /* margin: 100px auto; */
+    /* padding: 10px; */
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:5px
+    
+}
+
+.skills-content {
+    background-color: var(--color-two-dark);
+    /* max-width:500px; */
+    padding:10px;
+    color:var(--text-color-dark);
+
+}
+
+.resume-container {
+    padding:4%;
+    background-color:var(--main-color-dark);
+    display:grid;
+    grid-template-columns;
+}
+.button-container{
+    margin:auto;
+    color:yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .checkybox{
     color: var(--text-color-dark);
