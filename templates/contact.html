@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+{% block body%}
+
+<div class="form-container">
+
+    <h2>Contact Victor Today</h2>
+    <form action="" method="post">
+        <p class="form-item first_name-field">
+            {{form.first_name.label}} <br>
+            {{form.first_name(size=30)}}
+        </p>
+        <p class="form-item last_name-field">
+            {{form.last_name.label}} <br>
+            {{form.last_name(size=30)}}
+        </p>
+        <p class="form-item email-field">
+            {{form.email.label}} <br>
+            {{form.email(size=30)}}
+        </p>
+
+        <p class="form-item message-field">
+            {{form.message.label}} <br>
+            {{form.message()}}
+        </p>
+
+        <p class="form-item-first is_recruiter-field">
+            {{form.is_recruiter.label}} <br>
+            {{form.is_recruiter()}}
+        </p>
+
+
+
+
+        <p>
+        {{form.submit()}}
+        </p>
+    </form>
+</div>
+
+
+{% endblock %}

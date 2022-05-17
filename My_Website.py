@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from forms import SignUpForm
 
 app = Flask(__name__)
@@ -14,14 +14,17 @@ def homepage():
 def resume():
     return render_template('ResumeIndex.html')
 
-@app.route('/contact')
-def contact():
-    return render_template('ContactIndex.html')
+# @app.route('/contact')
+# def contact():
+#     return render_template('ContactIndex.html')
 
-@app.route('/signup')
-def signup():
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
     form = SignUpForm()
-    return render_template('signup.html', form=form)
+    if form.is_submitted():
+        result = request.form
+        #do something with this result. Maybe write it to an excel spreadsheet with OpenPyXL
+    return render_template('contact.html', form=form)
 
 
 
