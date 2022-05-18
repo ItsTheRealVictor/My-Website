@@ -43,7 +43,7 @@ h1 {
 }
 
 
-
+/* 
 h2 {
     color: var(--text-color-dark);
     display:block;
@@ -52,10 +52,14 @@ h2 {
     font-family: "Montserrat";
 }
 
+<<<<<<< HEAD
 .form-container {
     padding:2%;
     color:white;
 }
+=======
+} */
+>>>>>>> c8ce9ee13a77d0d403f67e98e1b74248b6b3647d
 
 textarea{
     height:200px;
@@ -162,8 +166,65 @@ li span {
     font-weight:bolder;
 }
 
+<<<<<<< HEAD
 .icon {
     display:flex;
     justify-content:center;
+=======
+.skills-container {
+    background-color:var(--color-two-dark);
+}
+
+.skills-container h1 {
+    color: var(--text-color-dark);
+}
+
+.skills-content-container{
+    
+    /* max-width: 960px; */
+    /* margin: 100px auto; */
+    /* padding: 10px; */
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:5px
+    
+}
+
+.skills-content {
+    background-color: var(--color-two-dark);
+    /* max-width:500px; */
+    padding:10px;
+    color:var(--text-color-dark);
+
+}
+
+.resume-container {
+    padding:4%;
+    background-color:var(--main-color-dark);
+    display:grid;
+    grid-template-columns;
+}
+.button-container{
+    margin:auto;
+    color:yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkybox{
+    color: var(--text-color-dark);
+>>>>>>> c8ce9ee13a77d0d403f67e98e1b74248b6b3647d
 }
 
