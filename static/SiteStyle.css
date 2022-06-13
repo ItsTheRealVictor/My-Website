@@ -33,18 +33,10 @@ h1 {
 
 }
 
-.h1 {
-    color: var(--text-color-dark);
-    display:block;
-    text-align:center;
-    padding: 5%;
-    font-family: "Amatic SC";
-
-}
 
 
-/* 
-h2 {
+
+/* h2 {
     color: var(--text-color-dark);
     display:block;
     text-align:center;
