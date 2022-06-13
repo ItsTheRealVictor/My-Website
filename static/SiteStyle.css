@@ -42,10 +42,14 @@ h1 {
     text-align:center;
     padding: 4%;
     font-family: "Montserrat";
+}
 
-} */
 
+textarea{
+    height:200px;
+    width: 500px;
 
+}
 
 #about {
     background-color:var(--main-color-dark);
@@ -107,17 +111,57 @@ li span {
     display: block;
 }
 
-.form-label {
-    padding-left: -5rem;
+.skill-section {
+    background-color: var(--color-two-dark);
+    padding-top: 1px;
+    color:white;
 }
 
+.skill-box {
+    display:flex;
+    flex-direction:column;
+}
+
+.skill-container{
+    display:grid;
+    grid-template-areas:
+    'education experience skills';
+    gap:10px;
+}
+
+.skill-education {
+    grid-area: education;
+}
+.skill-experience {
+    grid-area: experience;
+}
+.skill-skills {
+    grid-area: skills;
+}
+
+
+
 .skill-box h2 {
+    text-align:center;
+    padding-top:20px;
     font-family: "Amatic SC";
     font-weight:bolder;
 }
 
-.skills-container {
+.skill-box {
+    display:flex;
+    flex-direction:column;
+}
+
+
+.fa-solid {
+    align-self: center;
+    margin-top:4%;    
+}
+
+.skill-container {
     background-color:var(--color-two-dark);
+    color: var(--text-color-dark);
 }
 
 .skills-container h1 {
@@ -147,14 +191,25 @@ li span {
     padding:4%;
     background-color:var(--main-color-dark);
     display:grid;
-    grid-template-columns;
 }
+
+
 .button-container{
     margin:auto;
     color:yellow;
 }
 
 
+.form-container h2{
+    padding-top:8%;
+}
+.form-container {
+    padding:3%;
+    color: white;
+    border: white 1px solid;
+
+    
+}
 
 
 
@@ -172,6 +227,3 @@ li span {
     color: var(--text-color-dark);
 }
 
-#floatingTextarea {
-    height:250px;
-}
