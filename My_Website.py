@@ -23,7 +23,7 @@ def contact():
     form = SignUpForm()
     if form.is_submitted():
         result = request.form
-        #do something with this result. Maybe write it to an excel spreadsheet with OpenPyXL
+        print(result)
     return render_template('contact.html', form=form)
 
 
