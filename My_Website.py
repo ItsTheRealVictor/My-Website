@@ -25,7 +25,6 @@ def contact():
     if form.is_submitted():
         result = request.form
         print(result)
-
     return render_template('contact.html', form=form)
 
 @app.route('/PortfolioPage')
@@ -33,5 +32,5 @@ def portfolio():
     return render_template('PortfolioIndex.html')
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
