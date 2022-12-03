@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 from forms import SignUpForm
-from openpyxl import Workbook
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fart'
@@ -27,10 +26,9 @@ def contact():
         print(result)
     return render_template('contact.html', form=form)
 
-@app.route('/PortfolioPage')
-def portfolio():
-    return render_template('PortfolioIndex.html')
+@app.route('/farts')
+def farts():
+    return 'farts'
 
-
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
