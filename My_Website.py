@@ -19,18 +19,18 @@ def resume():
 # def contact():
 #     return render_template('ContactIndex.html')
 
-@app.route('/contact', methods=['GET', 'POST'])
-def contact():
-    form = SignUpForm()
-    if form.is_submitted():
-        result = request.form
-        print(result)
-    return render_template('contact.html', form=form)
+# @app.route('/contact', methods=['GET', 'POST'])
+# def contact():
+#     form = SignUpForm()
+#     if form.is_submitted():
+#         result = request.form
+#         print(result)
+#     return render_template('contact.html', form=form)
 
 @app.route('/PortfolioPage')
 def portfolio():
     return render_template('PortfolioIndex.html')
 
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run(debug=True)
