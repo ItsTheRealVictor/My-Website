@@ -3,7 +3,7 @@ from wtforms import StringField, SubmitField, RadioField, TextAreaField
 
 class SignUpForm(FlaskForm):
     first_name = StringField('First Name')
-    last_name = StringField('Last Name')
+    last_name = StringField('fart')
     email = StringField('email')
     message = TextAreaField('Message')
     is_recruiter = RadioField('Are you a recruiter?', choices=['Yes', 'No'])
