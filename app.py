@@ -18,17 +18,20 @@ def resume():
 # def contact():
 #     return render_template('ContactIndex.html')
 
-# @app.route('/contact', methods=['GET', 'POST'])
-# def contact():
-#     form = SignUpForm()
-#     if form.is_submitted():
-#         result = request.form
-#         print(result)
-#     return render_template('contact.html', form=form)
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    form = SignUpForm()
+    if form.is_submitted():
+        result = request.form
+        print(result)
+    return render_template('contact.html', form=form)
 
 @app.route('/projects')
-def farts():
+def projects():
     return render_template('PortfolioIndex.html')
 
+@app.route('/projects/integral_approximator')
+def integrals():
+    return render_template('includes/projects/integral_approximator.html')
 if __name__ == "__main__":
     app.run(debug=True)
