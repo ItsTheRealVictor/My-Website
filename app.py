@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fart'
 
 @app.route('/')
-@app.route("/home")
+@app.route('/home')
 def homepage():
     return render_template('HomeIndex.html')
 
@@ -26,9 +26,9 @@ def contact():
         print(result)
     return render_template('contact.html', form=form)
 
-@app.route('/farts')
-def farts():
-    return 'farts'
+@app.route('/projects')
+def portfolio():
+    return render_template('projects.html')
 
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
