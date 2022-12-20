@@ -20,9 +20,47 @@
 
 }
 
+
+
+/* playing with portfolio page layout */
 body {
     background-color:#222831;
 }
+
+.main{
+    display:flex;
+    flex-direction:row;
+    height: 10rem;
+    width:100%;
+    justify-content: space-between;
+
+}
+.proj_div{
+    flex-grow:1;
+    height:50px;
+    width:50px;
+    outline:1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main{
+    background-color:red;
+}
+
+
 
 h1 {
     color: var(--text-color-dark);
