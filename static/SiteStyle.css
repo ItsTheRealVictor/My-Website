@@ -10,6 +10,9 @@
     --text-color-light: #161D6F;
 }
 
+p{
+    color:white
+}
 
 #main-header-dark {
     color: var(--text-color-dark);
@@ -25,6 +28,7 @@
 /* playing with portfolio page layout */
 body {
     background-color:#222831;
+    color:white
 }
 
 .main{
