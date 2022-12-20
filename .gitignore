@@ -1,2 +1,6 @@
-.vscode/settings.json
-__pycache__/forms.cpython-39.pyc
+.vscode/
+__pycache__/
+mysite.db
+/migrations
+__pycache__/
+__pycache__/forms.cpython-310.pyc
