@@ -49,7 +49,7 @@ def resume():
 
 @app.route('/portfolio')
 def portfolio():
-    projects = ['first_one', 'second_one', 'third_one', 'fourth_one']
+    projects = ['first_one', 'second_one', 'third_one', 'fourth_one', 'fifth_one']
     
     return render_template('PortfolioIndex.html', projects=projects)
 
