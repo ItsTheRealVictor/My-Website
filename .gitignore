@@ -4,3 +4,4 @@ mysite.db
 /migrations
 __pycache__/
 __pycache__/forms.cpython-310.pyc
+/venv
