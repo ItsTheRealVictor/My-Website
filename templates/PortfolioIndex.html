@@ -5,7 +5,10 @@
 <h1>portfolio goes here eventually</h1>
         <div class="main">
                 {% for proj in projects %}
-                        <div class="proj_div">{{proj}}</div>
+                        <div class="proj_div">
+                                <a href="/project_info_{{proj.id}}">{{proj.title}}</a>
+                                <p>{{proj.description}}</p>
+                        </div>
          {% endfor %}
 
 

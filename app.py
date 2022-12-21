@@ -49,13 +49,13 @@ def resume():
 
 @app.route('/portfolio')
 def portfolio():
-    projects = ['first_one', 'second_one', 'third_one', 'fourth_one', 'fifth_one']
-    
+    projects = Projects.query.all()    
     return render_template('PortfolioIndex.html', projects=projects)
 
+@app.route('/project_info_<int:proj_id>')
+def show_project_info(proj_id):
+    project = Projects.query.get_or_404(proj_id)
+    
+    return render_template('/project_info.html', project=project)
 
 
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
