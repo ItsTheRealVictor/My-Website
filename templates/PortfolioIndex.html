@@ -17,6 +17,14 @@
                     <form style="display:inline" action="/projects/{{project.id}}">
                         <button class="btn btn-sm btn-success">See details</button>
                     </form>
+                    {% if session['username'] == 'victor' %}
+                    <form style="display:inline" action="/projects/{{project.id}}">
+                        <button class="btn btn-sm btn-warning">edit project</button>
+                    </form>
+                    <form style="display:inline" action="/projects/{{project.id}}" method="POST">
+                        <button class="btn btn-sm btn-danger">delete project</button>
+                    </form>
+                    {% endif %}
                     
                 </div>
             </div>
@@ -25,9 +33,12 @@
 
     </div>
 </div>
+
+{% if session['username'] == 'victor' %}
 <form action="/projects">
         <button>Add project</button>
 </form>
+{% endif %}
 
 
 

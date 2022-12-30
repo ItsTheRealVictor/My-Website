@@ -22,6 +22,18 @@
                   <a href="\portfolio" class="nav-link">Portfolio
                   </a>
                 </li>
+
+                {% if session['username'] %}
+                <li class="nav-item">
+                  <a href="\logout" class="nav-link">logout
+                  </a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a href="\login" class="nav-link">login
+                  </a>
+                </li>
+                {% endif %}
               </ul>
             </div>
           </nav>

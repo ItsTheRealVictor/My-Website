@@ -112,6 +112,15 @@ def show_project_info(proj_id):
     
     return render_template('project_info.html', project=project)
 
+@app.route('/projects/<int:proj_id>', methods=['POST'])
+def delete_project(proj_id):
+    project = Project.query.get_or_404(proj_id)
+    db.session.delete(project)
+    db.session.commit()
+    
+    return redirect('/portfolio')
+    
+
 
 @app.route('/projects/integral_approximator')
 def integrals():
