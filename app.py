@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     tunnel.start()
 
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://TheRealVictor:{python_anywhere_DB_PASSWORD}@localhost:{tunnel.local_bind_port}/TheRealVictor$my_website'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://TheRealVictor:{python_anywhere_DB_PASSWORD}@127.0.0.1:{tunnel.local_bind_port}/TheRealVictor$my_website'
 
 else:
     
