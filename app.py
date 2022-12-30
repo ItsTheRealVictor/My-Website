@@ -27,8 +27,11 @@ def contact():
     return render_template('contact.html', form=form)
 
 @app.route('/projects')
-def portfolio():
-    return render_template('projects.html')
+def projects():
+    return render_template('PortfolioIndex.html')
 
+@app.route('/projects/integral_approximator')
+def integrals():
+    return render_template('includes/projects/integral_approximator.html')
 # if __name__ == "__main__":
 #     app.run(debug=True)
