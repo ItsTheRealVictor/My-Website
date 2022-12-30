@@ -9,14 +9,21 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fart'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = -1
 
-tunnel = sshtunnel.SSHTunnelForwarder(
-    ('ssh.pythonanywhere.com'), ssh_username='TheRealVictor', ssh_password=python_anywhere_PASSWORD,
-    remote_bind_address=('TheRealVictor.mysql.pythonanywhere-services.com', 3306)
-)
 
-tunnel.start()
+if __name__ == '__main__':
+    
+    tunnel = sshtunnel.SSHTunnelForwarder(
+        ('ssh.pythonanywhere.com'), ssh_username='TheRealVictor', ssh_password=python_anywhere_PASSWORD,
+        remote_bind_address=('TheRealVictor.mysql.pythonanywhere-services.com', 3306)
+    )
 
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://TheRealVictor:{python_anywhere_DB_PASSWORD}@localhost:{tunnel.local_bind_port}/TheRealVictor$my_website'
+    tunnel.start()
+
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://TheRealVictor:{python_anywhere_DB_PASSWORD}@localhost:{tunnel.local_bind_port}/TheRealVictor$my_website'
+
+else:
+    
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin@localhost/my_website'
 
 
 
