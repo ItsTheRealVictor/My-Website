@@ -13,7 +13,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://TheRealVictor:{python_
 app.config['SQLALCHEMY_POOL_RECYCLE'] = 299
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
+# This is for using/developing the site at home
+# app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin@localhost/my_website"
 
 app.debug = False
 debug = DebugToolbarExtension(app)
