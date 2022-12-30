@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
 else:
     
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin@localhost/my_website'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:victordb@localhost/my_website'
 
 
 
