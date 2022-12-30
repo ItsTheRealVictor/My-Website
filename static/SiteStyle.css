@@ -27,6 +27,7 @@ p{
 
 /* playing with portfolio page layout */
 body {
+    padding-top:70px;
     background-color:#222831;
     color:white
 }
@@ -42,14 +43,15 @@ body {
     justify-content: space-between;
 
 }
-.proj_div{
-    flex-grow:1;
-    width: 500px;
-    outline:1px solid white;
-    text-align: center;
-    padding: 5% 0;
+.proj-info{
+    display:flex;
+    justify-content:center;
 }
 
+
+.proj-card{
+    background-color:rgb(80, 80, 80);
+}
 
 
 

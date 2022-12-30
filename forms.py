@@ -1,10 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, RadioField, TextAreaField
+from wtforms import StringField, TextAreaField, IntegerField
+from wtforms.validators import URL
 
-class SignUpForm(FlaskForm):
-    first_name = StringField('First Name')
-    last_name = StringField('fart')
-    email = StringField('email')
-    message = TextAreaField('Message')
-    is_recruiter = RadioField('Are you a recruiter?', choices=['Yes', 'No'])
-    submit = SubmitField('Click to send this message to Victor')
+
+class AddProjectForm(FlaskForm):
+    title = StringField('Project title')
+    description = TextAreaField('Project description')
+    demo_url = StringField('Demo URL', validators=[URL(message='NOT A VALID URL!')])

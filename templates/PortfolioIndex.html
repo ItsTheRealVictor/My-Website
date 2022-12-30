@@ -1,18 +1,34 @@
 {% extends 'base.html' %}
 
-{% block body %}
-{% include '/includes/_navbar.html' %}
-<h1>portfolio goes here eventually</h1>
-        <div class="main">
-                {% for proj in projects %}
-                        <div class="proj_div">
-                                <a href="/project_info_{{proj.id}}">{{proj.title}}</a>
-                                <p>{{proj.description}}</p>
-                        </div>
-         {% endfor %}
+{% block body  %}
+<h1>Check out my projects</h1>
 
+<div class="container-fluid">
+    <div class="row">
 
+        {% for project in projects %}
+        <div class="col-4">
+            
+            <div class="card text-white proj-card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.title}}</h5>
+                    <h6 class="card-subtitle text-muted">Some muted text</h6>
+                    <h6 class="card-subtitle text-muted my-2">Some more muted text</h6>
+                    <form style="display:inline" action="/projects/{{project.id}}">
+                        <button class="btn btn-sm btn-success">See details</button>
+                    </form>
+                    
+                </div>
+            </div>
         </div>
-        {% include '/includes/_social_links.html' %}
-        {% endblock %}
-        
+        {% endfor %}
+
+    </div>
+</div>
+<form action="/projects">
+        <button>Add project</button>
+</form>
+
+
+
+{% endblock body %}
