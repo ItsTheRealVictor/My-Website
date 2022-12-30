@@ -1,7 +1,7 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, redirect, session
 from flask_debugtoolbar import DebugToolbarExtension
-from models import db, connect_db, Projects
-from forms import AddProjectForm
+from models import db, connect_db, Project, User
+from forms import AddProjectForm, UserForm
 from SECRETS import python_anywhere_DB_PASSWORD
 
 app = Flask(__name__)
@@ -31,22 +31,37 @@ def resume():
 
 @app.route('/portfolio')
 def show_portfolio():
-    projects = Projects.query.all()
+    projects = Project.query.all()
     return render_template('PortfolioIndex.html', projects=projects)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register_user():
+    form = UserForm()
+    if form.validate_on_submit():
+        username = form.username.data
+        password = form.password.data
+        
+        new_user = User.register(username, password)
+        
+        db.session.add(new_user)
+        
+        session['user_id'] = new_user.id
+        return redirect('/')
+    return render_template('register.html', form=form)
 
 
 
 
 @app.route('/projects', methods=['GET', 'POST'])
 def portfolio():
-    projects = Projects.query.all()
+    projects = Project.query.all()
     form = AddProjectForm()
     if form.validate_on_submit():
         title = form.title.data
         description = form.description.data
         demo_url = form.demo_url.data
         
-        new_proj = Projects(title=title,
+        new_proj = Project(title=title,
                             description=description,
                             demo_url=demo_url)
         
@@ -63,7 +78,7 @@ def portfolio():
 
 @app.route('/projects/<int:proj_id>')
 def show_project_info(proj_id):
-    project = Projects.query.get_or_404(proj_id)
+    project = Project.query.get_or_404(proj_id)
     
     return render_template('project_info.html', project=project)
 
