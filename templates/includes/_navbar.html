@@ -2,8 +2,11 @@
     <!-- navbar -->
     <div>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-            <a href="\home" class="navbar-brand">home</a>
-
+            <a href="\home" class="navbar-brand">home (running on home server)</a>
+            
+            {% if session['user_id'] %}
+              <p>logged in as {{session['username']}}</p>
+            {% endif %}
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
