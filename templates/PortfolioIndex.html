@@ -1,5 +1,18 @@
-{% extends 'layout.html' %}
+{% extends 'base.html' %}
 
-{%block body%}
-{% include 'includes/_portfolio_details.html' %}
-{% endblock %}
+{% block body %}
+{% include '/includes/_navbar.html' %}
+<h1>portfolio goes here eventually</h1>
+        <div class="main">
+                {% for proj in projects %}
+                        <div class="proj_div">
+                                <a href="/project_info_{{proj.id}}">{{proj.title}}</a>
+                                <p>{{proj.description}}</p>
+                        </div>
+         {% endfor %}
+
+
+        </div>
+        {% include '/includes/_social_links.html' %}
+        {% endblock %}
+        

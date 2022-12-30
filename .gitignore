@@ -1,3 +1,11 @@
 .vscode/
 __pycache__/
+<<<<<<< HEAD
 /venv
+=======
+mysite.db
+/migrations
+__pycache__/
+__pycache__/forms.cpython-310.pyc
+/venv
+>>>>>>> b9708338462ae3171be95db1888bf2c2a333a4f2
