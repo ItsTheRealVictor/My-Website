@@ -2,12 +2,16 @@ from flask import Flask, render_template, redirect
 from flask_debugtoolbar import DebugToolbarExtension
 from models import db, connect_db, Projects
 from forms import AddProjectForm
+import sshtunnel
+from SECRETS import python_anywhere_PASSWORD
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fart'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = -1
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:admin@localhost/my_website'
-app.config['SQLALCHEMY_BINDS'] = {'testDB' : 'sqlite:///test_my_website.db'}
+
+
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:victordb@localhost/my_website'
+
 
 
 app.debug = False
