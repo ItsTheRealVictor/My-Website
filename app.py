@@ -11,6 +11,10 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = -1
 #this is when using the site from pythonanywhere
 app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://TheRealVictor:{python_anywhere_DB_PASSWORD}@TheRealVictor.mysql.pythonanywhere-services.com/TheRealVictor$my_website"
 app.config['SQLALCHEMY_POOL_RECYCLE'] = 299
+
+
+# This is for using/developing the site at home
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin@localhost/my_website"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # This is for using/developing the site at home
@@ -50,11 +54,36 @@ def register_user():
         db.session.add(new_user)
         
         session['user_id'] = new_user.id
+        session['username'] = new_user.username
+        
+        db.session.commit()        
+        
         return redirect('/')
     return render_template('register.html', form=form)
 
+@app.route('/login', methods=['GET', 'POST'])
+def login_user():
+    form = UserForm()
+    
+    if form.validate_on_submit:
+        username = form.username.data
+        password = form.password.data
+        
+        user = User.authenticate(username, password)
+        if user:
+            session['user_id'] = user.id
+            session['username'] = user.username
+            return redirect('/')
+        else:
+            form.username.errors = ['INVALID USERNAME/PASSWORD']
+            
+    return render_template('login.html', form=form)
 
-
+@app.route('/logout')
+def logout_user():
+    session.pop('user_id')
+    session.pop('username')
+    return redirect('/')
 
 @app.route('/projects', methods=['GET', 'POST'])
 def portfolio():
@@ -85,6 +114,15 @@ def show_project_info(proj_id):
     project = Project.query.get_or_404(proj_id)
     
     return render_template('project_info.html', project=project)
+
+@app.route('/projects/<int:proj_id>', methods=['POST'])
+def delete_project(proj_id):
+    project = Project.query.get_or_404(proj_id)
+    db.session.delete(project)
+    db.session.commit()
+    
+    return redirect('/portfolio')
+    
 
 
 @app.route('/projects/integral_approximator')
