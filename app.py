@@ -8,6 +8,10 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'fart'
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = -1
 
+#this is when using the site from pythonanywhere
+# app.config['SQLALCHEMY_DATABASE_URI'] = f"mysql+pymysql://TheRealVictor:{python_anywhere_DB_PASSWORD}@TheRealVictor.mysql.pythonanywhere-services.com/TheRealVictor$my_website"
+# app.config['SQLALCHEMY_POOL_RECYCLE'] = 299
+
 
 # This is for using/developing the site at home
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin@localhost/my_website"
